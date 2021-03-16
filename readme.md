@@ -1,12 +1,3 @@
-## data.sql:
-files contains schema of database and all nessecary creditial.
-
-## dockerfile:
-instruction to create image of give name.
-
-## run.sh
-shell script to run required command.
-
 
 # How to use?
 
