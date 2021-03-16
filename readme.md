@@ -8,7 +8,7 @@ instruction to create image of give name.
 shell script to run required command.
 
 
-#How to use?
+# How to use?
 
 ## Build Image:
 `docker build -t own_mysql:1.0 .`
