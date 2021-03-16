@@ -1,0 +1,55 @@
+Step 1: FROM ubuntu
+
+First we will need a OS i.e ubuntu 
+using FROM we can pull ubuntu image from docker hub.
+
+Step 2: RUN apt-get update; apt-get install mysql-server -y
+
+As we have ubuntu now and next step will be to install mysql-server
+for that we update apt-get and then run command to install mysql-server.
+
+Step 3: COPY ./data.sql .
+
+As we are having data.sql file on host machine and to run this file
+on our container i.e. on ubuntu we have to copy that file to 
+container directory.For that we can use "COPY <source_addr> <destination_addr>"
+command
+
+What's in data.sql file?
+
+In this file all database queries are written which will be
+execute on mysql-server(in the conatiner) i.e on mysql prompt(mysql>)
+Queries For:
+Creating Database
+Creating User 
+Creating Table(Schema)
+Adding entrie in database
+
+Step 4: COPY ./run.sh .
+
+As we are having run.sh file on host machine and to run this file
+on our container i.e. on ubuntu we have to copy that file to 
+container directory.For that we can use "COPY <source_addr> <destination_addr>"
+command
+
+what's in run.sh file?
+
+first we need to assign directory for mysql for that required command we will type
+in run.sh file. along with that command need to start mysql-server and load 
+all queries in mysql-server will be aslo there.
+
+Step 5: RUN chmod 755 ./run.sh
+
+Giving read,write,execute permission according to user for 
+run.sh file. which will be helpfull for executing file in 
+container.
+
+Step 6: EXPOSE 4040
+
+For communication with container we need port number 
+using command EXPOSE we explicity define port number which will
+be used for cintainer. 
+
+RUN ./run.sh
+
+RUN echo "mysql image built succesfully with default schema!!"
