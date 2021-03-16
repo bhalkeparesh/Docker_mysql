@@ -12,9 +12,9 @@ shell script to run required command.
 
 ## Build Image:
 `docker build -t own_mysql:1.0 .`
-1 build : to build an image
-2 -t : option to provide tagname
-3 . : path(current directory)
+1. build : to build an image
+2. -t : option to provide tagname
+3. . : path(current directory)
 
 Note: Make sure your in same directory where dockerfile is placed.
 
@@ -30,7 +30,7 @@ Note: Collect the container id of own_mysql for further use.
 `docker exec -it [Container_id] bash`
 
 ## Run mysql service:
-`# service mysql start`
-`# mysql`
-`mysql> use pucsdStudents`
-`mysql> select * from studentData`
+- `# service mysql start`
+- `# mysql`
+- `mysql> use pucsdStudents`
+- `mysql> select * from studentData`
