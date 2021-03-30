@@ -19,6 +19,8 @@ What's in data.sql file?
 
 In this file all database queries are written which will be
 execute on mysql-server(in the conatiner) i.e on mysql prompt(mysql>)
+also credentials are aslo saved in this file.
+i.e User_name and Password.
 Queries For:
 Creating Database
 Creating User 
@@ -40,16 +42,27 @@ all queries in mysql-server will be aslo there.
 
 Step 5: RUN chmod 755 ./run.sh
 
-Giving read,write,execute permission according to user for 
-run.sh file. which will be helpfull for executing file in 
+Giving read,write,execute permission according to user,group for 
+run.sh file. which will be helpful for executing file in 
 container.
 
 Step 6: EXPOSE 4040
 
 For communication with container we need port number 
 using command EXPOSE we explicity define port number which will
-be used for cintainer. 
+be used for container to communicate.in this case we are specifying 
+4040 port number.
 
-RUN ./run.sh
+Step 7: RUN ./run.sh
 
-RUN echo "mysql image built succesfully with default schema!!"
+to run command in container "RUN" command is used.
+Using run command we can run run.sh
+which does following things:
+1.Run mysql-server
+2.Create Database for user
+3.Loads Given schema
+
+Step 8: RUN echo "mysql image built succesfully with default schema!!"
+
+Not nessesary just print succesfull message after complition of 7 Steps!!!
+
