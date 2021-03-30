@@ -1,0 +1,23 @@
+version: "3"
+services:
+       database1:
+               image: own_mysql
+               ports:
+                       - "8080:8080"
+               stdin_open: true
+               tty: true
+
+
+       database2:
+               image: own_mysql
+               ports:
+                       - "5000:5000"
+               stdin_open: true
+               tty: true
+
+       database3:
+               image: own_mysql
+               ports:
+                       - "3080:3080"
+               stdin_open: true
+               tty: true
