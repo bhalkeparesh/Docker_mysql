@@ -1,0 +1,31 @@
+[0] What is docker-compose?
+
+Using Docker we can easily set up local developement environments. However, if you want to create multiple container for an application then  you have to create multiple Docker files.Load them and also maitaining them aslo will be time-consuming. 
+
+Docker Compose solves this problem by allowing you to use a YAML file(.yml) to operate multi-container applications at once. You can set the desired amount of containers counts, their builds and storage designs and then with a single set of commands you can build, run and configure all the containers.
+
+
+
+[1] What is the difference between Dockerfile and docker-compose.yml?
+
+Dockerfile:
+
+A Dockerfile is a simple text file that contains the commands a user could call to assemble an image i.e used to build image.
+Dockerfile  ----Docker Build---> Docker Image
+
+Docker Compose:
+
+is a tool for defining and running multi-container Docker applications.
+
+define the services that make up your app in docker-compose.yml so they can be run together in an isolated environment.
+
+get an app running in one command by just running docker-compose up
+[2] Explain each and every line present in your docker-compose.yml 
+
+[3] Github repository Link of your assignment repo. 
+
+[4] How clustering is important and how it solves our problems? 
+
+ Provider Services provides parallel clustering, in which a series of active, duplicate databases respond to user requests. Which database is accessed is transparent to users, who connect to and retrieve data from one data source. Provider Services facilitates the routing of connections between databases in a cluster, based on availability and precedence rules.
+
+ Using Clustering we can manage load for servers i.e load balancing which aslo failover support means failure in databse doesn't put server down..
