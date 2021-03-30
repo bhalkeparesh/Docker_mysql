@@ -25,3 +25,6 @@ Note: Collect the container id of own_mysql for further use.
 - `# mysql`
 - `mysql> use pucsdStudents`
 - `mysql> select * from studentData`
+## How to use Docker_Compose
+To run containers : `docker-compose up -d`
+To stop containers : `docker-compose down`
